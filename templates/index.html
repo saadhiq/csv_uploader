@@ -21,6 +21,8 @@
   <title>Mini App</title>
 </head>
 <body>
+  <h1> Image uploader</h1>
+  <a href="{% url 'File_Uploads' %}">Upload CSV Files</a>
   <div class="container row">
     {% for image in images %}
       <div class="card col-md-4" style="width: 18rem;">

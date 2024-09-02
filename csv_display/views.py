@@ -52,3 +52,6 @@ def fileupload(request):
     context = {'form': form}
     return render(request, "upload.html", context)
 
+# def index(request):
+#     return render(request, 'upload.html')
+
