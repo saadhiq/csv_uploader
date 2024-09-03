@@ -34,11 +34,11 @@
 
 from django.shortcuts import render, redirect
 from .forms import ImagesForm
-from .models import Image
+from .models import Image,Csv
 
 # Create your views here.
 def index(request):
-    images = Image.objects.all()
+    images = Csv.objects.all()
     context = {'images': images}
     return render(request, "index.html", context)
 def fileupload(request):
@@ -46,7 +46,7 @@ def fileupload(request):
     if request.method == 'POST':
         images = request.FILES.getlist('pic')
         for image in images:
-            image_ins = Image(pic = image)
+            image_ins = Csv(file = image)
             image_ins.save()
         return redirect('index')
     context = {'form': form}

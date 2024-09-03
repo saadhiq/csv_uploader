@@ -25,5 +25,16 @@
             <button type="submit" class="btn btn-outline-primary ">Submit</button>
         </form>
     </div>
+
+    <div class="container center">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Upload csv Files Here</label>
+              {{form}}
+            </div>
+            <button type="submit" class="btn btn-outline-primary ">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
